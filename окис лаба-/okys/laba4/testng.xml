@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Calculator Suite">
+
+    <!-- Первая конфигурация: только математика -->
+    <test name="Math Tests">
+        <groups>
+            <run>
+                <include name="math"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.example.app.CalculatorTest"/>
+        </classes>
+    </test>
+
+    <!-- Вторая конфигурация: только логика -->
+    <test name="Logic Tests">
+        <groups>
+            <run>
+                <include name="logic"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="com.example.app.CalculatorTest"/>
+        </classes>
+    </test>
+
+    <!-- Третья конфигурация: все тесты -->
+    <test name="All Tests">
+        <classes>
+            <class name="com.example.app.CalculatorTest"/>
+        </classes>
+    </test>
+
+</suite>
